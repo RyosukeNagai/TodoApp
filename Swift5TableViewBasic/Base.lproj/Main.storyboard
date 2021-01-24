@@ -52,7 +52,7 @@
                     <connections>
                         <outlet property="tableView" destination="T0y-nh-tCn" id="clC-51-58n"/>
                         <outlet property="textField" destination="6Op-Of-fwE" id="nhn-rU-NG5"/>
-                        <segue destination="adR-GA-R7c" kind="show" identifier="next" id="1gx-Hn-sKB"/>
+                        <segue destination="adR-GA-R7c" kind="show" identifier="" id="1gx-Hn-sKB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -62,7 +62,7 @@
         <!--Next View Controller-->
         <scene sceneID="G1o-86-yji">
             <objects>
-                <viewController id="adR-GA-R7c" customClass="NextViewController" customModule="Swift5TableViewBasic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="next" id="adR-GA-R7c" customClass="NextViewController" customModule="Swift5TableViewBasic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RjJ-lr-3gQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

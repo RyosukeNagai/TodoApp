@@ -26,18 +26,28 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-        return textArray.count
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-   }
-
+        navigationController?.isNavigationBarHidden = true
+        
+    }
+    
+    //セルの数の確認
     func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
         
     }
     
+    //セクションの中のセルの数の確認
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
+        return textArray.count
+        
+   }
+
+    //セルを返す
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -52,6 +62,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        //タップした時に、その配列の番号の中身を取り出して、値を渡す
+        
+        let nextVC = storyboard?
+            .instantiateViewController(identifier: "next") as! NextViewController
+        
+        nextVC.toDoString = textArray[indexPath.row]
+        
+        navigationController?.pushViewController(nextVC, animated: true)
         
         
     }
