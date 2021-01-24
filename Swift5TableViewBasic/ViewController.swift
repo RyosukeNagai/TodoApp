@@ -52,8 +52,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
          
+        cell.selectionStyle = .none
         cell.textLabel?.text = textArray[indexPath.row]
-        
         cell.imageView?.image = UIImage(named: "checkImage")
         
         return cell
